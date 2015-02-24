@@ -1,0 +1,134 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+body {
+	-webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-ms-transition: all .1s linear;
+	-o-transition: all .1s linear;
+	transition: all .1s linear;
+	position: relative;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.initial {
+	background: #5b96b8;
+}
+
+.start {
+	background: #5bb875;
+}
+
+.pause {
+	background: #acb85b;
+}
+
+.stop {
+	background: #b85b5b;
+}
+
+.painel {
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+	text-align: center;
+	display: block;
+	font-size: 95px;
+	color: #fff;
+	font-weight: 300;
+	position: relative;
+	top: 50px;
+}
+
+.painel .time {
+	position: relative;
+}
+
+.painel .volta {
+	position: absolute;
+	top: 0;
+	font-size: 20px;
+	list-style-type: decimal;
+	line-height: 20px;
+}
+
+.controller {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.controller ul {
+	width: 100%;
+	background: #fff;
+	position: relative;
+	display: block;
+}
+
+.controller ul#wrapper.show {
+	display: block;
+}
+
+.controller ul li {
+	width: 25%;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 0 -6px 0 0;
+	list-style: none;
+	font-size: 17px;
+	font-weight: 300;
+	color: #636466;
+	border-left: 1px solid #b2b2b2;
+	padding: 12px 0;
+	position: relative;
+	-webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-ms-transition: all .1s linear;
+	-o-transition: all .1s linear;
+	transition: all .1s linear;
+}
+
+.controller ul li:first-child {
+	border-left: 0;
+}
+
+.controller ul li:hover {
+	background: #f2f2f2;
+}
+
+.controller ul li:before {
+	content: "";
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	width: 22px;
+	height: 22px;
+	background: transparent url(img/sprite.png) no-repeat;
+	padding: 0 15px 0 0;
+	margin: 0 0 0 15px;
+}
+
+.controller ul li#start:before {
+	background-position:  -1px -101px;
+}
+
+.controller ul li#pause:before {
+	background-position: -1px -141px;
+}
+
+.controller ul li#stop:before {
+	background-position: -1px -182px;
+}
+
+.controller ul li#reset:before {
+	background-position: 0 -222px;
+}
