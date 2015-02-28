@@ -51,6 +51,13 @@ function Stop() {
 	m.innerText="00";
 }
 
+function limpaVolta() {
+	var volta = document.querySelector('.volta');
+	while (volta.firstChild) {
+	  volta.removeChild(volta.firstChild);
+	}
+}
+
 function updateDisplay(){		
 	var s_val = s.innerText;
 	var m_val = m.innerText;
@@ -90,6 +97,7 @@ reset.onclick=function(){
 	Reset(); 
 	body.setAttribute("class", "start");
 	wrapper.removeAttribute("class","show");
+	limpaVolta();
 };
 
 stop.onclick=function(){ 
